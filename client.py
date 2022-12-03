@@ -81,7 +81,7 @@ class Client:
         print('Successfully connected to {}:{}'.format(self.host, self.port))
         
         print()
-        self.name = input('Your name: ')
+        self.name = input('Name: ')
 
         print()
         print('Welcome, {}! Getting ready to send and receive messages...'.format(self.name))
@@ -145,7 +145,7 @@ def main(host, port):
     text_input = tk.Entry(master=frm_entry)
     text_input.pack(fill=tk.BOTH, expand=True)
     text_input.bind("<Return>", lambda x: client.send(text_input))
-    text_input.insert(0, "Your message here.")
+    text_input.insert(0, "Type the message here")
 
     btn_send = tk.Button(
         master=window,
